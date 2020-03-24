@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
+--
+-- Host: localhost    Database: jobs
+-- ------------------------------------------------------
+-- Server version	8.0.18
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+ SET NAMES utf8 ;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `jobs`
+--
+
+DROP TABLE IF EXISTS `jobs`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `jobs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `submitter` int(11) NOT NULL,
+  `processor` int(11) DEFAULT NULL,
+  `command` varchar(100) NOT NULL,
+  `status` int(11) NOT NULL DEFAULT '-1',
+  `startPro` datetime DEFAULT NULL,
+  `endPro` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=83 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jobs`
+--
+
+LOCK TABLES `jobs` WRITE;
+/*!40000 ALTER TABLE `jobs` DISABLE KEYS */;
+INSERT INTO `jobs` VALUES (2,2,22,'ipconfig',0,'2020-03-24 16:09:24',NULL),(5,11,1,'testcommand',0,'2020-03-24 20:38:22',NULL),(6,11,10,'testcommand',1,'2020-03-24 02:20:21','2020-03-24 21:05:11'),(7,2,5,'ASSOC',1,'2020-03-22 10:20:21','2020-03-22 10:32:21'),(8,1,1,'netstat',1,'2020-03-19 17:32:20','2020-03-19 17:33:55'),(9,33,5,'ping',1,'2020-03-19 17:34:00','2020-03-19 17:37:10'),(10,6,1,'ping',0,'2020-03-24 20:41:24',NULL),(11,17,6,'netstat',0,'2020-03-20 14:27:01',NULL),(12,7,NULL,'cd temp',-1,NULL,NULL),(13,7,7,'cd userd',0,'2020-03-24 13:32:07',NULL),(14,7,7,'powercfg',1,'2020-03-21 10:32:10','2020-03-21 10:33:01'),(15,1,NULL,'shutdown',-1,NULL,NULL),(16,1,NULL,'systeminfo',-1,NULL,NULL),(17,1,NULL,'systeminfo',-1,NULL,NULL),(18,1,NULL,'net use',-1,NULL,NULL),(19,1,NULL,'sfc',-1,NULL,NULL),(20,10,NULL,'shutdown',-1,NULL,NULL),(21,10,NULL,'systeminfo',-1,NULL,NULL),(22,10,NULL,'systeminfo',-1,NULL,NULL),(23,10,NULL,'sfc',-1,NULL,NULL),(24,10,NULL,'sfc',-1,NULL,NULL),(25,10,NULL,'sfc',-1,NULL,NULL),(26,10,NULL,'net use',-1,NULL,NULL),(27,10,NULL,'net use',-1,NULL,NULL),(28,10,NULL,'net use',-1,NULL,NULL),(29,13,NULL,'shutdown',-1,NULL,NULL),(30,13,NULL,'systeminfo',-1,NULL,NULL),(31,13,NULL,'systeminfo',-1,NULL,NULL),(32,13,NULL,'sfc',-1,NULL,NULL),(33,13,NULL,'sfc',-1,NULL,NULL),(34,13,NULL,'net use',-1,NULL,NULL),(35,2,7,'shutdown',0,'2020-03-24 16:09:24',NULL),(36,2,7,'systeminfo',0,'2020-03-24 16:09:24',NULL),(37,2,7,'systeminfo',0,'2020-03-23 16:09:24',NULL),(38,2,7,'net use',0,'2020-03-23 16:09:24',NULL),(39,2,5,'sfc',0,'2020-03-24 16:09:24',NULL),(40,11,5,'shutdown',0,'2020-03-22 16:09:24',NULL),(41,11,5,'systeminfo',0,'2020-03-24 16:09:24',NULL),(42,11,5,'systeminfo',0,'2020-03-23 16:09:24',NULL),(43,11,5,'sfc',0,'2020-03-23 16:09:24',NULL),(44,11,5,'sfc',0,'2020-03-24 16:09:24',NULL),(45,11,22,'sfc',0,'2020-03-23 16:09:24',NULL),(46,11,22,'net use',0,'2020-03-24 16:09:24',NULL),(47,11,22,'net use',0,'2020-03-23 16:09:24',NULL),(48,11,10,'net use',0,'2020-03-24 16:09:24',NULL),(49,14,10,'shutdown',0,'2020-03-23 16:09:24',NULL),(50,14,10,'systeminfo',0,'2020-03-24 16:09:24',NULL),(51,14,6,'systeminfo',0,'2020-03-23 16:09:24',NULL),(52,14,6,'sfc',0,'2020-03-23 16:09:24',NULL),(53,14,6,'sfc',0,'2020-03-22 16:09:24',NULL),(54,14,6,'net use',0,'2020-03-23 16:09:24',NULL),(55,3,8,'shutdown',1,'2020-03-24 16:09:24','2020-03-24 16:12:24'),(56,3,8,'systeminfo',1,'2020-03-24 15:23:22','2020-03-24 15:27:22'),(57,3,8,'systeminfo',1,'2020-03-23 16:09:24','2020-03-23 16:17:24'),(58,3,8,'sfc',1,'2020-03-24 15:23:22','2020-03-24 15:30:22'),(59,3,6,'sfc',1,'2020-03-23 10:12:23','2020-03-23 10:14:23'),(60,12,6,'net use',1,'2020-03-23 10:12:23','2020-03-23 10:17:23'),(61,12,6,'systeminfo',1,'2020-03-24 16:09:24','2020-03-24 16:14:24'),(62,12,6,'systeminfo',1,'2020-03-24 15:23:22','2020-03-24 15:27:22'),(63,12,6,'sfc',1,'2020-03-23 16:09:24','2020-03-23 16:32:24'),(64,12,6,'sfc',1,'2020-03-24 16:09:24','2020-03-24 16:44:24'),(65,12,23,'sfc',1,'2020-03-23 10:12:23','2020-03-23 10:12:59'),(66,12,23,'net use',1,'2020-03-24 15:23:22','2020-03-24 15:27:22'),(67,12,23,'net use',1,'2020-03-24 15:23:22','2020-03-24 15:35:22'),(68,12,11,'net use',1,'2020-03-24 16:09:24','2020-03-24 16:10:24'),(69,15,11,'shutdown',1,'2020-03-24 15:23:22','2020-03-24 15:44:22'),(70,15,11,'systeminfo',1,'2020-03-24 16:09:24','2020-03-24 16:14:24'),(71,15,7,'systeminfo',1,'2020-03-24 15:23:22','2020-03-24 15:28:22'),(72,15,7,'net use',1,'2020-03-23 10:12:23','2020-03-23 10:35:23'),(73,15,7,'net use',1,'2020-03-22 16:09:24','2020-03-22 16:22:24'),(74,15,7,'net use',1,'2020-03-24 15:23:22','2020-03-24 15:23:35');
+/*!40000 ALTER TABLE `jobs` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2020-03-24 18:10:14
